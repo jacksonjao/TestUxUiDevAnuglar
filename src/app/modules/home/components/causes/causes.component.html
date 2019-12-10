@@ -1,0 +1,18 @@
+
+<section id="causes" class="container-fluid causes">
+  <div class="container col-md-12 col-sm-12  col-xs-12 causes__container">
+    <ul class="row center-md middle-md causes__row causes__list">
+      <li class="col-md col-sm col-xs-12 causes__item" *ngFor="let cause of causes">
+        <div class="causes__item-content">
+          <figure class="causes__picture"><img
+            class="cover"
+            [src]="cause.img"
+            alt="Picture description"></figure>
+          <h3 class="causes__title">{{cause.title}}</h3>
+          <p class="causes__paragraph">{{cause.paragraph}} </p>
+        </div>
+        <button class="causes__button">+</button>
+      </li>
+    </ul>
+  </div>
+</section>

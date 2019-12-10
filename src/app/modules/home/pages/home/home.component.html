@@ -1,0 +1,14 @@
+<app-presentation [presentation]="presentation"></app-presentation>
+<app-causes></app-causes>
+
+<section class="feed container-fluid">
+  <div class="container col-md-12 col-sm-12 col-xs-12">
+    <app-gallery [gallery]="gallery" ></app-gallery>
+
+    <section class="latest row">
+      <app-events [events]="events" class="col-md-8 col-sm-12 col-xs-12"></app-events>
+      <app-news class="col-md-4 col-sm-12 col-xs-12"></app-news>
+      <app-sponsors class="col-md-12 col-sm-12 col-xs-12"></app-sponsors>
+    </section>
+  </div>
+</section>

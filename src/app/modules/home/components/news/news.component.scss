@@ -1,0 +1,42 @@
+@import "src/styles";
+
+.news{
+  padding-top: 3.125rem;
+}
+
+.news__row .feed__item:first-of-type .feed__image{
+  width: 100%;
+  height: 10.9375rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__content{
+  margin-left: 1.25rem;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .feed__paragraph{
+  margin-top: 0;
+}
+
+.news__row .feed__item:nth-of-type(1n+2) .calendar__date--inline-text{
+  line-height: 3rem;
+}
+
+.news .feed__image{
+  width: 6.25rem;
+  height: 5.3125rem;
+}
+
+.news .feed__title{
+  margin-bottom: 0.3rem;
+}
+
+.news .feed__paragraph{
+  margin-top: 0.5rem;
+}
+
+
+.calendar__date--inline-text{
+  @extend .paragraph;
+  font-size: 0.75rem;
+  color: $gray-color-4;
+}

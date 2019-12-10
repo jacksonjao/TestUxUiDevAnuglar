@@ -1,0 +1,32 @@
+<section id="news" class="news">
+  <div class="row news__row">
+
+    <nav class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12" aria-label="Latest News">
+      <ul class="subtitle-line-below__list">
+        <li class="subtitle-line-below__item">
+          <button class="start-md start-sm start-xs subtitle-line-below__button subtitle-line-below__button--active">
+            Latest News
+          </button>
+        </li>
+        <li class="subtitle-line-below__item">
+          <button class="start-md start-sm start-xs  subtitle-line-below__button"><img
+            src="assets/icons/option-icon.svg" alt="Picture description"></button>
+        </li>
+      </ul>
+    </nav>
+
+      <article class="feed__item col-md-12 col-sm-12 col-xs-12" *ngFor="let news of news; let i = index">
+        <figure class="feed__image">
+          <img class="cover"
+               [src]="news.img"
+               alt="Picture description">
+        </figure>
+        <div class="feed__content">
+          <h3 class="feed__title">{{news.title}}</h3>
+          <time datetime="2019-06-14 20:00" class="calendar__date--inline-text">{{news.date}}</time>
+          <p class="feed__paragraph">{{news.paragraph}}.</p>
+        </div>
+      </article>
+
+  </div>
+</section>

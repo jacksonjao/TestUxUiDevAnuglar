@@ -1,0 +1,87 @@
+// Table of Contents:
+//
+//  1. Colors
+//  2. Typography
+//  3. Header
+//  4. Util
+//  5. Presentation
+//  6. Collapsible
+//  7. Chips
+//  8. Date + Time Picker
+//  9. Dropdown
+//  10. Forms
+//  11. Global
+//  12. Grid
+//  13. Navigation Bar
+//  14. Side Navigation
+//  15. Photo Slider
+//  16. Spinners | Loaders
+//  17. Tabs
+//  18. Tables
+//  19. Toasts
+//  20. Typography
+//  21. Footer
+//  22. Flow Text
+//  23. Collections
+//  24. Progress Bar
+
+
+// 1. Colors
+// ==========================================================================
+$body-background: var(--body-background);
+$border-causes-color: var(--border-causes-color);
+$pink-color: var(--pink-color);
+$font-color-custom-black: var(--font-color-custom-black);
+$font-color-header: var(--font-color-header);
+$pink-color-2: var(--pink-color-2);
+$red-color: var(--red-color);
+$primary-color: var(--primary-color);
+$primary-accent-color: var(--primary-accent-color);
+$primary-shadow: var(--primary-shadow-color);
+$primary-dark-color: var(--primary-dark-color);
+$primary-light-color: var(--primary-light-color);
+$accent-color: var(--accent-color);
+$secondary: var(--secondary-color);
+$green-color: var(--green-color);
+$green-color-2: var(--green-color-2);
+$aqua-color: var(--aqua-color);
+$white-color: var(--white-color);
+$gray-color-0: var(--gray-color-0);
+$gray-color-1: var(--gray-color-1);
+$gray-color-2: var(--gray-color-2);
+$gray-color-3: var(--gray-color-3);
+$gray-color-4: var(--gray-color-4);
+$gray-color-5: var(--gray-color-5);
+$gray-color-6: var(--gray-color-6);
+$gray-color-7: var(--gray-color-7);
+$gray-color-8: var(--gray-color-8);
+$gray-color-9: var(--gray-color-9);
+$background-input-color: var(--background-input-color);
+$border-input-color: var(--border-input-color);
+
+// 2. Typography
+// ==========================================================================
+$open-sans-font: 'Open Sans', sans-serif;
+$light: 300;
+$regular: 400;
+$regular-italic: 400i;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// 3. Header
+// ==========================================================================
+
+$logo-size: 2rem;
+$header-height: 6.25rem;
+$header-padding: 1.5625rem;
+$header-border-size: 0.4375rem;
+
+// 4. Util
+// ==========================================================================
+$transition: 0.25s;
+$border: solid 0.0625rem;
+$presentation-height:  34.0625rem;
+$causes-height:  35.1875rem;
+$margin: 0.625rem;
+

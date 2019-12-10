@@ -1,0 +1,49 @@
+<section id="events" class="events">
+  <div class="row events__row">
+
+    <nav class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12" aria-label="Latest Events">
+      <ul class="subtitle-line-below__list">
+        <li class="subtitle-line-below__item ">
+          <button class="start-md start-sm start-xs subtitle-line-below__button subtitle-line-below__button--active">
+            Latest Events
+          </button>
+        </li>
+        <li class="subtitle-line-below__item">
+          <button class="start-md start-sm start-xs  subtitle-line-below__button"><img
+            src="assets/icons/option-icon.svg" alt="Picture description"></button>
+        </li>
+      </ul>
+    </nav>
+    <ng-container *ngFor="let event of events; let i = index" >
+      <article class="feed__item col-md-12 col-sm-12 col-xs-12" *ngIf="i===0">
+        <figure class="feed__image">
+          <img class="cover"
+               [src]="event.img"
+               alt="Picture description">
+        </figure>
+        <div class="calendar">
+          <time datetime="2019-06-14 20:00" class="calendar__date">{{event.month}} <br> <span>{{event.day}}</span></time>
+        </div>
+        <div class="feed__content">
+          <h3 class="feed__title">{{event.title}}</h3>
+          <p class="feed__paragraph">{{event.paragraph}}</p>
+        </div>
+      </article>
+
+      <article class="feed__item col-md-6 col-sm-6 col-xs-12" *ngIf="i>0">
+        <figure class="feed__image">
+          <img class="cover"
+               [src]="event.img"
+               alt="Picture description">
+        </figure>
+        <div class="calendar">
+          <time datetime="2019-06-14 20:00" class="calendar__date">{{event.month}} <br> <span>{{event.day}}</span></time>
+        </div>
+        <div class="feed__content">
+          <h3 class="feed__title">{{event.title}}</h3>
+          <p class="feed__paragraph">{{event.paragraph}}</p>
+        </div>
+      </article>
+    </ng-container>
+  </div>
+</section>

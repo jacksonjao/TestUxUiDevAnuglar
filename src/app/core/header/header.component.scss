@@ -1,0 +1,215 @@
+@import "src/styles";
+
+/*========================== Header Section ==========================*/
+
+.header {
+  width: 100%;
+  background: $gray-color-9;
+  height: $header-height;
+  transition: $transition;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+
+.header--hidden {
+  top: -6.25rem
+}
+
+.header:before {
+  content: '';
+  width: 100%;
+  height: $header-border-size;
+  background: $primary-dark-color;
+  position: absolute;
+  margin-left: -2rem;
+}
+
+.header__container {
+  max-width: 100%;
+}
+
+.header__container, .header__row, .header__logo, .header__list, .header__item {
+  height: 100%;
+  display: flex;
+}
+
+.header__logo {
+  font-size: $logo-size;
+  font-weight: $bold;
+  color: $pink-color;
+  align-items: center;
+  flex: 1;
+}
+
+.header__item {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $header-padding;
+  color: $font-color-header;
+  position: relative;
+}
+
+.header__link:not(.header__link--donate){
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header__item:not(.header__donate):before {
+  content: '';
+  width: 100%;
+  height: $header-border-size;
+  background: $primary-dark-color;
+  position: absolute;
+  top: 0;
+  border-left: solid 0.125rem $gray-color-9;
+  border-right: solid 0.125rem $gray-color-9;
+}
+
+.header__item:hover {
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.header__item:hover::before {
+  background: $primary-color;
+}
+
+.header__item--active {
+  color: $primary-color !important;
+}
+
+.header__item--active:before {
+  background: $primary-color !important;
+}
+
+.header__link {
+  @extend .small-font-label;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.header__donate {
+  background: $green-color;
+}
+
+.header__donate > .header__link {
+  font-weight: $extra-bold;
+  margin-top: 0.3125rem;
+}
+
+
+@mixin header--md() {
+
+  @include menu-icon;
+
+  .header {
+    height: 0;
+    overflow: auto;
+  }
+
+  .header-fade-in {
+    display: flex;
+    height: 100vh;
+  }
+  .header__container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .header__container, .header__list {
+    flex-direction: column;
+
+  }
+
+  .header__container, .header__list, .header__logo{
+    height: auto;
+  }
+
+  .header__item{
+    margin-top: 3rem;
+  }
+
+
+  .header__logo {
+    justify-content: center;
+    margin-top: $header-border-size*3;
+    flex: inherit;
+  }
+
+  .header__item:before, .header__item:hover::before, .header__item--active:before {
+    display: none;
+  }
+
+  .header__donate {
+    background: inherit;
+    margin-bottom: 2rem;
+  }
+
+}
+
+@mixin menu-icon {
+
+  #header__menu-button {
+    width: 2.5rem;
+    height: 2rem;
+    top: 1.5625rem;
+    left: 1.5625rem;
+    position: fixed;
+    z-index: 999;
+    padding-top: 0.8rem;
+  }
+
+  #header__menu-button:hover {
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    content: '';
+    width: 2.5rem;
+    height: 0.4rem;
+    background: $white-color;
+    position: absolute;
+    box-shadow: $accent-color 2px 2px 5px;
+  }
+
+  .header__menu-icon, .header__menu-icon:before, .header__menu-icon:after {
+    @extend .menu-icon;
+    transition: $transition;
+  }
+
+  .header__menu-icon {
+    transition: $transition;
+  }
+
+  .header__menu-icon:before {
+    top: -0.8rem;
+  }
+
+  .header__menu-icon:after {
+    top: 0.8rem;
+  }
+
+  .header__menu-icon--activated {
+    width: 0;
+  }
+
+  .header__menu-icon--activated:before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  .header__menu-icon--activated:after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+}
+
+
+@media (max-width: 992px) {
+  @include header--md();
+}

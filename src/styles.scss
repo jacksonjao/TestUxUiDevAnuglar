@@ -1,1 +1,310 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap');
+@import "assets/scss/variables";
+@import "assets/scss/libraries/flexboxgrid";
+@import "assets/scss/libraries/normalize";
+
+:root {
+  --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --font-color-custom-black: #000000;
+  --pink-color-2: #ebb8b8;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
+  --border-causes-color: #dfdfe1;
+  --primary-shadow-color: #a72525;
+  --primary-dark-color: #773737;
+  --primary-light-color: rgba(204, 77, 77, 0.6);
+  --accent-color: rgba(0, 0, 0, 0.5);
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --green-color-2: #97b16b;
+  --aqua-color: #009999;
+  --background-input-color: #f9f9f9;
+  --border-input-color: #ebebeb;
+  --white-color: #ffffff;
+  --body-background: #ffffff;
+  --body-background-contrast: #ffffff;
+  --gray-color-0: #fbfbfb;
+  --gray-color-1: #f0f0f0;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #666666;
+  --gray-color-5: #444444;
+  --gray-color-6: #393939;
+  --gray-color-7: #323232;
+  --gray-color-8: #2a2a2a;
+  --gray-color-9: #222222;
+}
+
+.dark-mode{
+  --pink-color: #ffe5e5;
+  --font-color-header: #f0f0f0;
+  --pink-color-2: #ebb8b8;
+  --font-color-custom-black: #bbbbbb;
+  --border-causes-color: #393939;
+  --red-color: #e7402f;
+  --primary-color: #cc4d4d;
+  --primary-accent-color: rgba(136, 60, 60, 0.50);
+  --primary-shadow-color: #a72525;
+  --primary-dark-color: #773737;
+  --primary-light-color: rgba(204, 77, 77, 0.6);
+  --accent-color: rgba(0, 0, 0, 0.5);
+  --secondary-color: #222222;
+  --green-color: #32ba6d;
+  --green-color-2: #97b16b;
+  --aqua-color: #009999;
+  --background-input-color: #393939;
+  --border-input-color: #ebebeb;
+  --body-background: #1c1c1e;
+  --body-background-contrast: #1c1c1e;
+  --white-color: #ffffff;
+  --gray-color-0: #393939;
+  --gray-color-1: #2a2a2a;
+  --gray-color-2: #bbbbbb;
+  --gray-color-3: #999999;
+  --gray-color-4: #bbbbbb;
+  --gray-color-5: #bbbbbb;
+  --gray-color-6: #393939;
+  --gray-color-7:  #bbbbbb;
+  --gray-color-8: #2a2a2a;
+  --gray-color-9: #222222;
+}
+
+body{
+  background-color: $body-background;
+  transition: $transition;
+}
+
+* {
+  font-family: $open-sans-font;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+button:hover{
+  cursor: pointer;
+}
+
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: none;
+  filter: brightness(0.8);
+}
+
+label {
+  @extend .label;
+}
+
+input, textarea {
+  border: solid 0.0625rem $border-input-color;
+  background: $background-input-color;
+  min-height: 1.875rem;
+  color: $font-color-header;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.basic-slider__list::-webkit-scrollbar, .gallery__list::-webkit-scrollbar {
+  display: none;
+}
+
+.small-font-label {
+  font-weight: $semi-bold;
+  font-size: 0.75rem;
+}
+
+.label {
+  color: $gray-color-4;
+  font-size: 0.875rem;
+  font-weight: $semi-bold;
+}
+
+.icon {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+
+.heading-1 {
+  font-weight: $regular;
+  font-size: 1.5rem;
+}
+
+.heading-2 {
+  font-weight: $semi-bold;
+  font-size: 1.625rem;
+}
+
+.heading-3 {
+  font-weight: $semi-bold;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.heading-4 {
+  font-weight: $semi-bold;
+  font-size: 1.125rem;
+  line-height: 1.3rem;
+}
+
+.heading-5 {
+  font-weight: $bold;
+  font-size: 1rem;
+  color: $gray-color-4;
+  text-transform: uppercase;
+  height: auto;
+}
+
+.block-scroll{
+  overflow: hidden!important;
+  height: 100vh!important;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+figure {
+  background: $gray-color-2;
+}
+
+.paragraph {
+  font-weight: $regular;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.paragraph-light {
+  @extend .paragraph;
+  font-weight: $light;
+}
+
+.simple-button {
+  border: none;
+  color: $white-color;
+  background-color: $gray-color-9;
+  font-weight: $bold;
+  font-size: 0.875rem;
+}
+
+/*========================== Subtitles with line below ==========================*/
+
+.subtitle-line-below {
+  margin-bottom: 2.8125rem;
+}
+
+.subtitle-line-below__list {
+  display: flex;
+}
+
+
+.feed .subtitle-line-below__item:nth-last-of-type(1){
+  flex: 1;
+}
+
+
+.subtitle-line-below__item:nth-last-of-type(1)>.subtitle-line-below__button {
+  margin-left: 0.125rem;
+  padding: 0 0.25rem;
+}
+.subtitle-line-below__button{
+  @extend .heading-3;
+  font-size: 1.5rem;
+  width: 100%;
+  color: $gray-color-7;
+}
+
+.subtitle-line-below__button, .subtitle-line-below__text {
+  position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.subtitle-line-below__button:before, .subtitle-line-below__text:before {
+  content: '';
+  width: 100%;
+  height: 0.4375rem;
+  background: $primary-light-color;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+}
+
+.subtitle-line-below__button:hover:before {
+  background: $primary-color;
+}
+
+.subtitle-line-below__button--active:before {
+  background: $primary-color;
+}
+
+
+.subtitle-line-below__text:before{
+  background-color: $primary-color;
+  width: 110%;
+  height: 0.25rem;
+}
+
+.subtitle-line-below__text {
+  @extend .heading-4;
+  text-transform: uppercase;
+  color: $white-color;
+}
+
+
+
+/*========================== Feed Section - Gallery, Events, News ==========================*/
+
+
+.feed__item{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.8125rem;
+}
+
+.feed__image{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.feed__content{
+  flex: 1;
+}
+
+.feed__title{
+  @extend .heading-3;
+  margin-bottom: $margin;
+  color: $font-color-custom-black;
+}
+
+.feed__paragraph{
+  @extend .paragraph-light;
+  color: $gray-color-4;
+}
+
+
+

@@ -1,0 +1,74 @@
+@import "src/assets/scss/variables";
+
+.sponsors{
+  margin-top: 3.125rem;
+  margin-bottom: 6.25rem;
+}
+
+.sponsors__row{
+  position: relative;
+}
+
+.sponsors__row:before{
+  content: '';
+  width: 7rem;
+  height: 5.3125rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.sponsors__row:after{
+  content: '';
+  width: 7rem;
+  height: 5.3125rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+}
+
+.feed__items::-webkit-scrollbar {
+  display: none;
+}
+
+.sponsors__row .feed__items{
+  position: relative;
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+}
+
+.sponsors__row .feed__item:first-of-type{
+  margin-left: 0;
+}
+
+.sponsors__row .feed__item{
+  margin-bottom: 0;
+  margin-left: 1.75rem;
+}
+
+
+.sponsors__row .feed__image{
+  width: 11.25rem;
+  height: 5.3125rem;
+  margin-bottom: 0;
+  border: 0.0625rem solid $gray-color-1;
+}
+.sponsors__row .feed__image>.cover{
+  transition: $transition;
+
+}
+
+.sponsors__next-button{
+  position: absolute;
+  top: 7rem;
+  z-index: 2;
+  background: transparent;
+}
+
+.sponsors__next-button:last-of-type{
+  right: 0;
+  z-index: 2;
+  transform: rotate(180deg);
+}

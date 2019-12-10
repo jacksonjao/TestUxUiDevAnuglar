@@ -1,0 +1,24 @@
+<section class="sponsors">
+  <div class="row sponsors__row">
+    <nav class=" subtitle-line-below col-md-12 col-sm-12  col-xs-12" aria-label="sponsors">
+      <ul class="subtitle-line-below__list">
+        <li class="subtitle-line-below__item">
+          <button class="start-md start-sm start-xs subtitle-line-below__button subtitle-line-below__button--active">
+            Sponsors
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <button (click)="nextItem(list)" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
+    <button (click)="previousItem(list)" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
+    <ul #list id="sponsors-slider" class="feed__items col-md-12 col-sm-12 col-xs-12 ">
+      <li class=" feed__item" *ngFor="let sponsor of sponsors">
+        <figure class="feed__image">
+          <img class="cover"
+               [src]="sponsor.img"
+               alt="Picture description">
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>

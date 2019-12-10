@@ -1,0 +1,21 @@
+<div id="header__menu-button" (click)="toggleMenu()" ><div class="header__menu-icon" [ngClass]="isOpen ? 'header__menu-icon--activated' : ''"></div></div>
+
+<header class="header container-fluid" id="header " [ngClass]="[isOpen ? 'header-fade-in' : '', isHiddenMenu ? 'header--hidden': '']">
+  <nav class="container header__container" aria-label="gallery">
+    <span (click)="changeTheme(isDarkMode = !isDarkMode)" id="logo" title="Go to Charity" class="header__logo">Charity.</span>
+    <ul class="header__list">
+      <ng-container *ngFor="let navigation of urlsNavigation; let i = index" >
+      <li class="header__item" [ngClass]="section===navigation.url ? 'header__item--active' : ''" (click)="goToPage(navigation.url)" *ngIf="i<urlsNavigation.length-1">
+        <a  class="header__link">{{navigation.title}}</a>
+      </li>
+        <li class="header__item header__donate" *ngIf="i===urlsNavigation.length-1">
+          <img class="icon header__donate-icon"
+               src="assets/icons/heart-icon.svg"
+               aria-hidden="true"
+               alt="icon represents donate">
+          <a href="" class="header__link header__link--donate">Donate!</a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,109 @@
+@import "src/styles";
+
+/*========================== Causes Section ==========================*/
+
+$size-button: 2.6875rem;
+.causes {
+  background-color: $gray-color-1;
+  height: $causes-height;
+  position: relative;
+}
+
+.causes:before {
+  content: '';
+  width: 100%;
+  border-top: 0.125rem solid $border-causes-color;
+  height: 0.125rem;
+  background:  $body-background;
+  position: absolute;
+  margin-left: -2rem;
+  top: 12.625rem;
+}
+
+.causes::after {
+  content: '';
+  height: $size-button/2;
+  width: 100%;
+  background: $body-background;
+  bottom: 0;
+  position: absolute;
+  margin-left: -2rem;
+  z-index: 0;
+}
+
+.causes__container, .causes__row, .causes__item {
+  height: 100%;
+}
+
+.causes__list::-webkit-scrollbar {
+  display: none;
+}
+
+.causes__list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.causes__item-content {
+  margin-left: 1.875rem;
+}
+
+.causes__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.causes__item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.causes__picture {
+  width: 13.5625rem;
+  height: 13.5625rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: $margin 0;
+}
+
+.causes__title {
+  @extend .heading-2;
+  color: $gray-color-4;
+  margin: $margin 0;
+  text-shadow: 0.125rem 0.125rem $white-color;
+}
+
+.causes__button {
+  @extend .small-font-label;
+  font-size: 1.5rem;
+  width: $size-button;
+  height: $size-button;
+  border-radius: 50%;
+  color: $white-color;
+  background-color: $gray-color-1;
+  border: solid 0.1875rem $body-background;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.causes__button--active {
+  background-color: $primary-color;
+}
+
+.causes__button:hover {
+  background-color: $primary-color;
+}
+
+.causes__paragraph {
+  @extend .paragraph-light;
+  color: $gray-color-4;
+  margin: $margin 0;
+}

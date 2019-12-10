@@ -1,10 +1,26 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 
-const routes: Routes = [];
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+};
+const APP_ROUTES: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {
+    path: 'home',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
+  },
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+  {
+    path: 'contact',
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule),
+  },
+  /*{
+    path: 'contact',
+    loadChildren: './modules/embargos-desembargos/embargos-desembargos.module#EmbargosDesembargosModule',
+    canLoad: [AuthGuard]
+  },*/
+  { path: '**',  redirectTo: 'home', pathMatch: 'full' }
+];
+
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, routerOptions);

@@ -1,0 +1,57 @@
+@import "src/styles";
+
+/*========================== Presentation section ==========================*/
+
+.presentation {
+  height: $presentation-height;
+  color: $white-color;
+  padding-top: $header-height;
+  background: url("https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_1280.jpg") no-repeat fixed bottom;
+  background-size: cover;
+}
+
+.presentation__container, .presentation__row {
+  height: 100%;
+}
+
+.presentation__title, .presentation__paragraph {
+  background: $accent-color;
+}
+
+.presentation__title {
+  @extend .heading-1;
+  margin: $margin 0;
+  width: 100%;
+  padding: 0.25rem 1.25rem;
+}
+
+.presentation__paragraph {
+  @extend .paragraph;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  line-height: 1.5625rem;
+  margin: $margin 0;
+  overflow-y: scroll;
+  max-height: 15rem;
+}
+
+
+.presentation__read-more-button {
+  @extend .simple-button;
+  padding: 0.6rem 1.25rem;
+  margin: $margin 0;
+  border-radius: 0.1875rem;
+
+}
+
+
+@mixin presentation--md() {
+  .presentation {
+    padding-top: 0;
+  }
+}
+
+
+@media (max-width: 992px) {
+  @include presentation--md();
+}
