@@ -9,8 +9,8 @@
         </li>
       </ul>
     </nav>
-    <button (click)="nextItem(list)" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
-    <button (click)="previousItem(list)" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
+    <button (click)="nextItem()" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
+    <button (click)="previousItem()" class="icon sponsors__next-button"><img src="assets/icons/next-icon.svg" alt="Picture description"></button>
     <ul #list id="sponsors-slider" class="feed__items col-md-12 col-sm-12 col-xs-12 ">
       <li class=" feed__item" *ngFor="let sponsor of sponsors">
         <figure class="feed__image">

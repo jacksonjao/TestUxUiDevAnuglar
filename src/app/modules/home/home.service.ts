@@ -7,6 +7,7 @@ import {CauseModel} from '../../shared/model/cause';
 import {GalleryModel} from '../../shared/model/gallery';
 import {EventModel} from '../../shared/model/event';
 import {NewsModel} from '../../shared/model/news';
+import {SponsorModel} from '../../shared/model/sponsor';
 
 @Injectable()
 export class HomeService {
@@ -34,6 +35,8 @@ export class HomeService {
   getNews(): Observable<NewsModel> {
     return this.httpClient.get<NewsModel>(`${this.endpoint}/news.json`);
   }
-
+  getSponsors(): Observable<SponsorModel> {
+    return this.httpClient.get<SponsorModel>(`${this.endpoint}/sponsors.json`);
+  }
 }
 

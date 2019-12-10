@@ -3,4 +3,5 @@ export interface NewsModel {
   title: string;
   paragraph: string;
   date: string;
+  numberOfComments: number;
 }
