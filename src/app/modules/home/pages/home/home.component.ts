@@ -14,11 +14,11 @@ import {SponsorModel} from '../../../../shared/model/sponsor';
 })
 export class HomeComponent implements OnInit {
   presentation: PresentationModel;
-  causes: CauseModel;
-  gallery: GalleryModel;
-  events: EventModel;
-  news: NewsModel;
-  sponsors: SponsorModel;
+  causes: CauseModel[];
+  gallery: GalleryModel[];
+  events: EventModel[];
+  news: NewsModel[];
+  sponsors: SponsorModel[];
   constructor(private homeService: HomeService) {
     this.homeService.getPresentation().subscribe(result => this.presentation = result );
     this.homeService.getCauses().subscribe(result => this.causes = result );

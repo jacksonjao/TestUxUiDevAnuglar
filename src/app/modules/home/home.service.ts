@@ -20,23 +20,23 @@ export class HomeService {
   return this.httpClient.get<PresentationModel>(`${this.endpoint}/presentation.json`);
   }
 
-  getCauses(): Observable<CauseModel> {
-    return this.httpClient.get<CauseModel>(`${this.endpoint}/causes.json`);
+  getCauses(): Observable<CauseModel[]> {
+    return this.httpClient.get<CauseModel[]>(`${this.endpoint}/causes.json`);
   }
 
-  getGallery(): Observable<GalleryModel> {
-    return this.httpClient.get<GalleryModel>(`${this.endpoint}/gallery.json`);
+  getGallery(): Observable<GalleryModel[]> {
+    return this.httpClient.get<GalleryModel[]>(`${this.endpoint}/gallery.json`);
   }
 
-  getEvents(): Observable<EventModel> {
-    return this.httpClient.get<EventModel>(`${this.endpoint}/events.json`);
+  getEvents(): Observable<EventModel[]> {
+    return this.httpClient.get<EventModel[]>(`${this.endpoint}/events.json`);
   }
 
-  getNews(): Observable<NewsModel> {
-    return this.httpClient.get<NewsModel>(`${this.endpoint}/news.json`);
+  getNews(): Observable<NewsModel[]> {
+    return this.httpClient.get<NewsModel[]>(`${this.endpoint}/news.json`);
   }
-  getSponsors(): Observable<SponsorModel> {
-    return this.httpClient.get<SponsorModel>(`${this.endpoint}/sponsors.json`);
+  getSponsors(): Observable<SponsorModel[]> {
+    return this.httpClient.get<SponsorModel[]>(`${this.endpoint}/sponsors.json`);
   }
 }
 
